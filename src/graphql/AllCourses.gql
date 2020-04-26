@@ -1,0 +1,10 @@
+query AllCourses ($searchString: String) {
+  courses (searchString: $searchString) {
+    id
+    name
+    description
+    defaultCredits
+    courseCode
+    termsOffered
+  }
+}
