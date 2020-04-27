@@ -1,0 +1,11 @@
+mutation createStats ($createName: String!, $createGamerTag: String!, $createKD: String!, $createPlatform: String!) {
+  createStats (
+    name: $createName
+    GamerTag: $createGamerTag,
+    KD: $createKD,
+    Platform: $createPlatform,
+  ) {
+      id
+  }
+}
+

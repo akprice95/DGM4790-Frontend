@@ -1,23 +1,21 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      dark
-    >
-    <v-spacer></v-spacer>
-    <div>
-        <router-link class="routerLink" to="/">Home</router-link><span class="routerLink"> | </span>
-        <router-link class="routerLink" to="/admin">Admin</router-link><span class="routerLink"> | </span>
+    <v-app-bar app dark>
+      <v-spacer></v-spacer>
+      <div>
+        <router-link class="routerLink" to="/">Home</router-link>
+        <span class="routerLink">|</span>
+        <router-link class="routerLink" to="/admin">Admin</router-link>
+        <span class="routerLink">|</span>
         <router-link class="routerLink" to="/rest-home">Rest Home</router-link>
       </div>
-    <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
     </v-app-bar>
 
     <v-content>
-      
       <!-- <CourseCard/> -->
       <!-- <Admin/> -->
-      <router-view/>
+      <router-view />
     </v-content>
   </v-app>
 </template>
@@ -28,7 +26,7 @@
 //import Admin from './components/Admin'
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     //ApolloExample,
@@ -38,13 +36,13 @@ export default {
 
   data: () => ({
     //
-  }),
+  })
 };
 </script>
 
 <style scoped>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
 }
 .routerLink {
   color: #fff;

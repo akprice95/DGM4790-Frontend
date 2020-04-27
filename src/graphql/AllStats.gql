@@ -1,0 +1,10 @@
+query getAllStat {
+  Stats {
+    id
+    updatedAt
+    name
+    KD
+    GamerTag
+    Platform
+  }
+}

@@ -1,0 +1,8 @@
+query getStat ($idInput: ID) {
+  Stat (id: $idInput) {
+    name
+    KD
+    GamerTag
+    Platform
+  }
+}

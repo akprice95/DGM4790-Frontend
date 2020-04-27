@@ -1,0 +1,8 @@
+query filterStat ($searchString: String){
+  filterStat (searchString: "$searchString") {
+   	name,
+    KD,
+    GamerTag,
+    Platform
+  }
+}

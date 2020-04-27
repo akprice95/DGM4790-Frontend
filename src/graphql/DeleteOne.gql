@@ -1,0 +1,12 @@
+mutation deleteOne ($deleteID: String!) {
+  deleteOne(where: {
+    id: $deleteID
+    })
+  {
+    id
+    name
+    Platform
+    GamerTag
+  }
+}
+

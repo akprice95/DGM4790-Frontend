@@ -1,24 +1,26 @@
 # final-project-frontend
 
-## Project setup
+# Gamer Stats Editer Frontend
+
+For more information you can access the [GraphQL Server Documentation](https://github.com/akprice95/GraphQL-API-Node-Server) and the [Rest API Documentation](https://github.com/akprice95/CRUDServer)
+
+## How to use
+
+### 1. Clone project to your desired folder
+
 ```
-yarn install
+git clone https://github.com/akprice95/DGM4790-Frontend
 ```
 
-### Compiles and hot-reloads for development
+### 2. Install project dependencies
+
 ```
-yarn serve
+npm i
+npm run serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### 3. Open project in browser
 
-### Lints and fixes files
-```
-yarn lint
-```
+[localhost:8080](http://localhost:8080/#/)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 4. Create/Modify/Search Your Gamer information with my Rest API and GraphQL Servers
