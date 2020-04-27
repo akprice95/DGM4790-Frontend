@@ -11,17 +11,37 @@
       <!-- Result -->
       <div v-else-if="data" class="result-apollo">
         <v-row>
-          <v-col cols="4" v-for="(item, i) in data.Stats" :key="i">
-            <v-card class="mx-auto" max-width="550">
+          <v-col col v-for="(item, i) in data.Stats" :key="i">
+            <v-card class="mx-auto" width="450">
               <v-card-text>
                 <p class="statsStyle">ID: {{ item.id }}</p>
-                <p class="statsStyle">Name: {{ item.name }}</p>
-                <p class="statsStyle">GamerTag: {{ item.GamerTag }}</p>
-                <p class="statsStyle">Platform: {{ item.Platform }}</p>
-                <p class="statsStyle">KD: {{ item.KD }}</p>
-                <p class="statsStyle">updated At: {{ item.updatedAt }}</p>
+
+                <p class="statsStyle">
+                  <span class="title">Platform:</span>
+                  {{ item.Platform }}
+                </p>
+                <p class="statsStyle">
+                  <span class="title">KD:</span>
+                  {{ item.KD }}
+                </p>
+                <p class="statsStyle">
+                  <span class="title">updated At:</span>
+                  {{ item.updatedAt }}
+                </p>
               </v-card-text>
-              <v-card-actions>
+              <!-- add this div and put name and gamer tag in item
+              give this div its own classname mx-auto-name-->
+              <div class="mx-auto-name" id="test">
+                <p class="statsStyle bold">
+                  <span class="title">Name:</span>
+                  {{ item.name }}
+                </p>
+                <p class="statsStyle">
+                  <span class="title">GamerTag:</span>
+                  {{ item.GamerTag }}
+                </p>
+              </div>
+              <v-card-actions class="mx-auto-actions">
                 <v-btn color="primary" fab x-small dark @click="editCourse(item)">
                   <v-icon>mdi-pencil</v-icon>
                 </v-btn>
@@ -54,6 +74,9 @@ export default {
 };
 </script>
 
+
+
+
 <style scoped>
 .result {
   padding: 1rem;
@@ -62,17 +85,42 @@ export default {
 .statsStyle {
   font-size: 1.25rem;
   font-weight: 600;
-  color: black;
-  text-transform: uppercase;
+}
+
+.title {
   font-weight: bold;
-  text-align: center;
+  text-transform: uppercase;
+}
+
+.bold {
+  font-size: 1.5em;
 }
 
 .mx-auto {
-  background: #09eae2;
+  background: #76b6cc;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.mx-auto:hover {
+  box-shadow: 12px 16px 10px rgba(0, 0, 0, 0.2);
+  background: #49869c;
+}
+
+.mx-auto-name {
+  width: 100%;
+  height: 100px;
+  background: white;
+  text-align: left;
+  padding: 10px 15px;
+}
+
+.mx-auto-actions {
+  background: white;
 }
 
 .result-apollo {
-  background: black;
+  /* background: black; */
 }
 </style>

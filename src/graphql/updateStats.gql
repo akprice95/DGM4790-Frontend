@@ -1,11 +1,10 @@
 mutation updateStats ($id: ID!, $name: String!, $GamerTag: String!, $KD: String!, $Platform: String!) {
   updateStats(
     id: $id,
-    category: $category,
     name: $name, 
-    constellation: $GamerTag,
-    nameOrigin: $KD,
-    distance: $Platform
+    GamerTag: $GamerTag,
+    KD: $KD,
+    Platform: $Platform
   ) {
     id,
     name,

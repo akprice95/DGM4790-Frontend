@@ -46,11 +46,11 @@
       <v-row>
         <v-col>
           <v-card-title>Search all items</v-card-title>
-          <v-text-field v-model="searchString" label="Search for an item..."></v-text-field>
+          <v-text-field v-model="searchstring" label="Search for an item..."></v-text-field>
         </v-col>
       </v-row>
       <!-- Apollo watched Graphql query -->
-      <ApolloQuery :query="require('../graphql/SearchGamer.gql')" :variables="{ searchString }">
+      <ApolloQuery :query="require('../graphql/SearchGamer.gql')" :variables="{ searchstring }">
         <template v-slot="{ result: { loading, error, data } }">
           <!-- Loading -->
           <div v-if="loading" class="loading apollo">Loading...</div>
@@ -171,7 +171,7 @@
     <ApolloMutation
       :mutation="require('../graphql/DeleteOne.gql')"
       :variables="{
-        deleteOne,
+        deleteID,
         }"
       @done="onDone"
     >
@@ -182,7 +182,7 @@
             <v-card-title>Delete an Item</v-card-title>
             <v-row>
               <v-col cols="12" md="12">
-                <v-text-field class="form" v-model="deleteOne" label="id" required filled></v-text-field>
+                <v-text-field class="form" v-model="deleteID" label="id" required filled></v-text-field>
               </v-col>
             </v-row>
 
@@ -206,12 +206,12 @@ export default {
     GamerTag: "",
     Platform: "",
     id: "",
-    searchString: "akprice95",
+    searchstring: "akprice95",
     createName: "",
     createGamerTag: "",
     createKD: "",
     createPlatform: "",
-    deleteOne: ""
+    deleteID: ""
   }),
   methods: {
     onDone() {

@@ -1,5 +1,5 @@
-query filterStat ($searchString: String){
-  filterStat (searchString: "$searchString") {
+query filterStat ($searchstring: String){
+  filterStat (searchstring: $searchstring) {
    	name,
     KD,
     GamerTag,

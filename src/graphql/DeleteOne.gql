@@ -1,5 +1,5 @@
-mutation deleteOne ($deleteID: String!) {
-  deleteOne(where: {
+mutation deleteOneStats ($deleteID: String!) {
+  deleteOneStats(where: {
     id: $deleteID
     })
   {
