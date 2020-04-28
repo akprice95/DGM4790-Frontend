@@ -21,19 +21,21 @@
           <div v-else-if="data" class="result apollo">
             <v-row>
               <v-col cols="3" v-for="(item, i) in data" :key="i">
-                <v-card class="mx-auto" max-width="350">
-                  <v-card-text>
-                    <p>ID: {{ item.id }}</p>
-                    <p>Updated At: {{ item.updatedAt }}</p>
-                    <p>
-                      Name:
-                      <strong>{{ item.name }}</strong>
-                    </p>
-                    <p>KD: {{ item.KD }}</p>
-                    <p>GamerTag: {{ item.GamerTag }}</p>
-                    <p>Platform: {{ item.Platform }}</p>
-                  </v-card-text>
-                </v-card>
+                <div class="mx-auto-name" id="test">
+                  <v-card class="mx-auto" max-width="350">
+                    <v-card-text>
+                      <p>ID: {{ item.id }}</p>
+                      <p>Updated At: {{ item.updatedAt }}</p>
+                      <p>
+                        Name:
+                        <strong>{{ item.name }}</strong>
+                      </p>
+                      <p>KD: {{ item.KD }}</p>
+                      <p>GamerTag: {{ item.GamerTag }}</p>
+                      <p>Platform: {{ item.Platform }}</p>
+                    </v-card-text>
+                  </v-card>
+                </div>
               </v-col>
             </v-row>
           </div>
@@ -62,17 +64,19 @@
           <div v-else-if="data" class="result apollo">
             <v-row>
               <v-col cols="3" v-for="(item, i) in data.filterStat" :key="i">
-                <v-card class="mx-auto" max-width="350">
-                  <v-card-text>
-                    <p>Name: {{ item.name }}</p>
-                    <p>
-                      KD:
-                      <strong>{{ item.KD }}</strong>
-                    </p>
-                    <p>GamerTag: {{ item.GamerTag }}</p>
-                    <p>Platform: {{ item.Platform }}</p>
-                  </v-card-text>
-                </v-card>
+                <div class="mx-auto-name" id="test">
+                  <v-card class="mx-auto" max-width="350">
+                    <v-card-text>
+                      <p>Name: {{ item.name }}</p>
+                      <p>
+                        KD:
+                        <strong>{{ item.KD }}</strong>
+                      </p>
+                      <p>GamerTag: {{ item.GamerTag }}</p>
+                      <p>Platform: {{ item.Platform }}</p>
+                    </v-card-text>
+                  </v-card>
+                </div>
               </v-col>
             </v-row>
           </div>
@@ -222,12 +226,44 @@ export default {
 </script>
 
 <style scoped>
-/* .v-input {
-  background: black;
-  color: white;
+.result {
+  padding: 1rem;
 }
 
-.v-text-field__slot {
-  color: white;
-} */
+.statsStyle {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bold {
+  font-size: 1.5em;
+}
+
+.mx-auto {
+  background: #76b6cc;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.mx-auto:hover {
+  box-shadow: 12px 16px 10px rgba(0, 0, 0, 0.2);
+  background: #49869c;
+}
+
+.mx-auto-name {
+  width: 100%;
+  background: white;
+  text-align: left;
+  padding: 10px 15px;
+}
+
+.mx-auto-actions {
+  background: white;
+}
 </style>

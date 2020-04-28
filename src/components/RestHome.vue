@@ -3,7 +3,7 @@
     <v-row>
       <v-container>
         <v-col cols="12">
-          <h1>RESTFUL API Home</h1>
+          <h1>RESTFUL API</h1>
           <br />
           <v-btn @click="getData" class="dataBtn" id="getDataBtn">Get All Data</v-btn>
         </v-col>
@@ -12,31 +12,33 @@
         <div>
           <v-row>
             <v-col cols="4" v-for="(item, i) in stats" :key="i">
-              <v-card class="mx-auto" max-width="550">
-                <v-card-text>
-                  <p class="name">ID: {{ item._id }}</p>
-                  <p>
-                    <strong>KD:</strong>
-                    {{ item.KD }}
-                  </p>
-                  <p>
-                    <strong>GamerTag:</strong>
-                    {{ item.gamerTag }}
-                  </p>
-                  <p>
-                    <strong>Matches Played:</strong>
-                    {{ item.matchesPlayed }}
-                  </p>
-                  <p>
-                    <strong>Platform:</strong>
-                    {{ item.platform }}
-                  </p>
-                  <p>
-                    <strong>ID:</strong>
-                    {{ item._id }}
-                  </p>
-                </v-card-text>
-              </v-card>
+              <div class="mx-auto-name" id="test">
+                <v-card class="mx-auto" max-width="550">
+                  <v-card-text>
+                    <p class="name">ID: {{ item._id }}</p>
+                    <p>
+                      <strong>KD:</strong>
+                      {{ item.KD }}
+                    </p>
+                    <p>
+                      <strong>GamerTag:</strong>
+                      {{ item.gamerTag }}
+                    </p>
+                    <p>
+                      <strong>Matches Played:</strong>
+                      {{ item.matchesPlayed }}
+                    </p>
+                    <p>
+                      <strong>Platform:</strong>
+                      {{ item.platform }}
+                    </p>
+                    <p>
+                      <strong>ID:</strong>
+                      {{ item._id }}
+                    </p>
+                  </v-card-text>
+                </v-card>
+              </div>
             </v-col>
           </v-row>
         </div>
@@ -275,10 +277,26 @@ export default {
 
 <style scoped>
 .mx-auto {
-  background: #09eae2;
-  color: azure;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
+  background: #76b6cc;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.mx-auto:hover {
+  box-shadow: 12px 16px 10px rgba(0, 0, 0, 0.2);
+  background: #49869c;
+}
+
+.mx-auto-name {
+  width: 100%;
+  /* height: 100px; */
+  background: white;
+  text-align: left;
+  padding: 10px 15px;
+}
+
+.mx-auto-actions {
+  background: white;
 }
 </style>

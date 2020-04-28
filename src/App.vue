@@ -5,9 +5,9 @@
       <div>
         <router-link class="routerLink" to="/">Home</router-link>
         <span class="routerLink">|</span>
-        <router-link class="routerLink" to="/admin">Admin</router-link>
+        <router-link class="routerLink" to="/admin">GraphQL</router-link>
         <span class="routerLink">|</span>
-        <router-link class="routerLink" to="/rest-home">Rest Home</router-link>
+        <router-link class="routerLink" to="/rest-home">Rest API</router-link>
       </div>
       <v-spacer></v-spacer>
     </v-app-bar>
